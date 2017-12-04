@@ -152,9 +152,10 @@ INSERT INTO attendances (person_id, movie_id) VALUES (3, 4);
 
 -- Oops! Someone at CodeClan spelled Lorna's name wrong!
 -- Change it to reflect the proper spelling (Noble).
+
 UPDATE people
 SET name = 'Lorna Noble'
-WHERE name = 'Lorna Nobel_Prize';
+WHERE name = 'Lorna Nobel-Prize';
 
 SELECT name FROM people;
 -- Return ONLY your name from the 'people' table.
