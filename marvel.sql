@@ -152,26 +152,38 @@ INSERT INTO attendances (person_id, movie_id) VALUES (3, 4);
 
 -- Oops! Someone at CodeClan spelled Lorna's name wrong!
 -- Change it to reflect the proper spelling (Noble).
-
 UPDATE people
 SET name = 'Lorna Noble'
 WHERE name = 'Lorna Nobel-Prize';
 
-SELECT name FROM people;
 -- Return ONLY your name from the 'people' table.
+-- SELECT name FROM people WHERE name = 'Max Robson'
 
 -- The cinema is showing 'Batman Begins', but Batman is DC,
 -- not Marvel! Delete the entry from the 'movies' table.
+DELETE FROM movies WHERE title = 'Batman Begins';
 
 -- Create a new entry in the 'people' table with the name of
 -- one of the instructors.
+INSERT INTO people (name)
+VALUES ('Craig Morton');
+
 -- Alex has decided to hijack our movie evening, Remove him
 -- from the table of people.
+DELETE FROM people WHERE name = 'Alex Bazlinton';
 
 -- The cinema has just heard that they will be holding an
 -- exclusive midnight showing of 'Guardians of the Galaxy 2'!!
 -- Create a new entry in the 'movies' table to reflect this.
+INSERT INTO movies (title, year, show_time)
+VAlUES ('Guardians of the Galaxy 2', 2017, '00:00');
 
 -- The cinema would also like to make the Guardian movies a
 -- back to back feature. Update the 'Guardians of the Galaxy'
 -- show time from 17:55 to 21:30.
+
+UPDATE movies
+SET show_time = '21:30'
+WHERE title = 'Guardians of the Galaxy' AND show_time = '17:55';
+
+SELECT * FROM movies;
