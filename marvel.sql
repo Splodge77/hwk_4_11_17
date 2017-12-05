@@ -145,10 +145,10 @@ INSERT INTO attendances (person_id, movie_id) VALUES (9, 5);
 INSERT INTO attendances (person_id, movie_id) VALUES (3, 4);
 
 -- Return ALL the data in the 'movies' table.
--- SELECT * FROM movies;
+SELECT * FROM movies;
 
 -- Return ONLY the name column from the 'people' table.
--- SELECT name FROM people;
+SELECT name FROM people;
 
 -- Oops! Someone at CodeClan spelled Lorna's name wrong!
 -- Change it to reflect the proper spelling (Noble).
@@ -157,7 +157,7 @@ SET name = 'Lorna Noble'
 WHERE name = 'Lorna Nobel-Prize';
 
 -- Return ONLY your name from the 'people' table.
--- SELECT name FROM people WHERE name = 'Max Robson'
+SELECT name FROM people WHERE name = 'Max Robson'
 
 -- The cinema is showing 'Batman Begins', but Batman is DC,
 -- not Marvel! Delete the entry from the 'movies' table.
